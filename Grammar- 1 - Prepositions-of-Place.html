@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grammar Focus: Prepositions of Place (IN, ON, AT)</title>
+<link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+<style>
+/* ============================================================
+   ESL LESSON SHELL TEMPLATE v3.0
+   Brand: Navy/Gold — Georgia headings, Lato body
+   All colours as CSS variables — never hardcode inline
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Brand colours */
+  --navy:        #1B2D4F;
+  --gold:        #C9972C;
+  --gold-light:  #D4AC45;
+  --gold-bg:     #FDF6E3;
+  --slate:       #4A5568;
+  --grey-blue:   #6B7A8D;
+  --off-white:   #F7F9FC;
+  --light-grey:  #F0F4F8;
+  --border-grey: #D9E2EC;
+  --steel:       #B8C6D6;
+  --white:       #FFFFFF;
+  /* Semantic */
+  --green:       #1A6B4A;
+  --green-bg:    #E8F5EE;
+  --red:         #B91C1C;
+  --red-bg:      #FEE2E2;
+  --sky:         #2E86AB;
+  /* Typography */
+  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-body:    'Lato', sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--off-white);
+  color: var(--slate);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* SITE HEADER */
+.site-header { background: var(--navy); border-bottom: 2px solid var(--gold); }
+.site-header-inner {
+  max-width: 900px; margin: 0 auto;
+  padding: 12px 32px;
+  display: flex; align-items: center; justify-content: center;
+}
+.site-header-brand {
+  font-family: var(--font-heading);
+  font-size: 22px;
+  font-style: italic;
+  color: var(--white);
+  letter-spacing: 0.02em;
+  opacity: 0.95;
+}
+
+/* HERO */
+.hero { background: var(--navy); position: relative; overflow: hidden; }
+.hero::before { content:''; position:absolute; top:-60px; right:-60px; width:320px; height:320px; border-radius:50%; background:rgba(44,130,173,0.14); }
+.hero::after  { content:''; position:absolute; bottom:-40px; left:40px; width:200px; height:200px; border-radius:50%; background:rgba(201,151,44,0.10); }
+.hero-inner { max-width:900px; margin:0 auto; padding:48px 32px 40px; position:relative; z-index:1; }
+.hero-badge { display:inline-flex; align-items:center; gap:8px; background:rgba(201,151,44,0.15); border:1px solid rgba(201,151,44,0.4); border-radius:20px; padding:5px 14px; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:18px; }
+.hero-title { font-family:var(--font-heading); font-size:clamp(26px,5vw,40px); color:var(--white); line-height:1.15; margin-bottom:6px; }
+.hero-sub { font-size:14px; color:rgba(255,255,255,0.5); margin-bottom:28px; font-weight:300; }
+
+/* OPTION A — Outcomes grid */
+.hero-outcomes { background:rgba(255,255,255,0.06); border:1px solid rgba(255,255,255,0.10); border-radius:10px; padding:18px 22px; display:grid; grid-template-columns:repeat(3,1fr); gap:14px; }
+@media(max-width:600px){ .hero-outcomes{ grid-template-columns:1fr; } }
+.outcome-item { font-size:13px; color:var(--white); font-weight:400; }
+.outcome-item::before { content:'✓ '; color:var(--gold); font-weight:700; }
+.outcome-note { font-size:11px; color:rgba(255,255,255,0.4); font-style:italic; padding-left:14px; margin-top:2px; }
+
+/* OPTION B — Pills */
+.hero-pills { display:flex; gap:10px; flex-wrap:wrap; }
+.pill { background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.12); border-radius:20px; padding:5px 14px; font-size:12px; color:rgba(255,255,255,0.7); }
+.pill.accent { background:rgba(201,151,44,0.2); border-color:rgba(201,151,44,0.4); color:var(--gold); }
+
+.progress-wrap { background:rgba(255,255,255,0.08); height:3px; }
+.progress-fill { height:100%; background:linear-gradient(90deg,var(--sky),var(--gold)); transition:width 0.4s ease; }
+
+/* STEP NAVIGATION */
+.step-nav { background:var(--white); border-bottom:1px solid var(--border-grey); position:sticky; top:0; z-index:100; box-shadow:0 2px 10px rgba(0,0,0,0.05); }
+.step-nav-inner { max-width:900px; margin:0 auto; padding:0 32px; display:flex; overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.step-btn { padding:13px 16px; border:none; background:none; border-bottom:3px solid transparent; font-family:var(--font-body); font-size:12px; font-weight:500; color:var(--grey-blue); cursor:pointer; white-space:nowrap; transition:all 0.15s; }
+.step-btn:hover { color:var(--sky); }
+.step-btn.active { border-bottom-color:var(--gold); color:var(--navy); font-weight:700; }
+
+/* MAIN */
+.main { max-width:900px; margin:0 auto; padding:36px 32px 80px; }
+@media(max-width:600px){ .main{ padding:20px 16px 60px; } }
+@keyframes fadeUp { from{opacity:0;transform:translateY(14px)} to{opacity:1;transform:translateY(0)} }
+.sc { animation:fadeUp 0.28s ease; }
+
+/* SECTION BADGE */
+.sec-badge { display:grid; grid-template-columns:52px 1fr auto; background:var(--navy); border-radius:8px; overflow:hidden; margin-bottom:24px; }
+.sec-badge-num { display:flex; align-items:center; justify-content:center; background:rgba(255,255,255,0.07); font-family:var(--font-heading); font-size:22px; color:var(--gold); padding:16px; }
+.sec-badge-title { display:flex; align-items:center; padding:16px 20px; font-family:var(--font-heading); font-size:17px; color:var(--white); }
+.sec-badge-time { display:flex; align-items:center; padding:16px 20px; font-size:12px; color:rgba(255,255,255,0.45); font-style:italic; white-space:nowrap; }
+
+/* GOLD RULE */
+.gold-rule { height:2px; background:linear-gradient(90deg,var(--gold),var(--gold-light),transparent); border:none; margin:0 0 24px; }
+
+/* INFO BOX */
+.info-box { background:var(--off-white); border-top:2px solid var(--gold); border-bottom:2px solid var(--gold); border-left:4px solid var(--navy); border-right:1px solid var(--light-grey); padding:14px 18px; margin-bottom:20px; font-size:14px; line-height:1.7; color:var(--slate); }
+
+/* TIP BOX */
+.tip-box { background:var(--off-white); border-left:4px solid var(--gold); padding:12px 16px; margin-bottom:20px; font-size:14px; line-height:1.7; color:var(--slate); }
+.tip-label { font-weight:700; color:var(--navy); margin-bottom:4px; font-size:13px; }
+
+/* BILINGUAL NOTE */
+.es-note { background:var(--gold-bg); border-left:3px solid var(--gold); border-radius:0 6px 6px 0; padding:10px 16px; font-size:13px; color:#7A5500; font-style:italic; margin-bottom:18px; line-height:1.6; }
+
+/* VOCAB TABLE */
+.vocab-table-wrap { background:var(--white); border:1px solid var(--border-grey); border-radius:10px; overflow:hidden; margin-bottom:20px; box-shadow:0 2px 10px rgba(0,0,0,0.04); }
+.vocab-table-head { display:grid; grid-template-columns:1fr 1fr; background:var(--navy); padding:12px 20px; }
+.vocab-table-head span { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); font-weight:700; }
+.vocab-row { display:grid; grid-template-columns:1fr 1fr; padding:11px 20px; border-bottom:1px solid var(--light-grey); transition:background 0.12s; }
+.vocab-row:last-child { border-bottom:none; }
+.vocab-row:hover { background:var(--light-grey); }
+.vocab-en { font-size:14px; font-weight:700; color:var(--navy); }
+.vocab-es { font-size:14px; color:var(--grey-blue); }
+
+/* PATTERN BOX */
+.pattern-box { background:var(--white); border:1px solid var(--border-grey); border-radius:10px; overflow:hidden; margin-bottom:20px; }
+.pattern-box-head { background:var(--sky); padding:11px 20px; font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--white); font-weight:700; }
+.pattern-row { display:grid; grid-template-columns:1fr 1fr; padding:11px 20px; border-bottom:1px solid var(--light-grey); gap:10px; }
+.pattern-row:last-child { border-bottom:none; }
+.pattern-en { font-size:14px; font-weight:500; color:var(--navy); }
+.pattern-es { font-size:13px; color:var(--grey-blue); font-style:italic; }
+
+/* EXAMPLES */
+.examples-wrap { margin-bottom:24px; }
+.examples-label { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:var(--gold); font-weight:700; margin-bottom:10px; }
+.example-item { display:flex; align-items:baseline; gap:10px; padding:8px 0; border-bottom:1px dashed var(--border-grey); font-size:14px; flex-wrap:wrap; }
+.example-item:last-child { border-bottom:none; }
+.example-en { font-weight:500; color:var(--navy); font-style:italic; }
+.example-arrow { color:var(--steel); }
+.example-es { color:var(--grey-blue); font-size:13px; }
+
+/* MISTAKE BOX */
+.mistake-wrap { background:var(--white); border:1px solid var(--border-grey); border-radius:10px; padding:18px; margin-bottom:22px; }
+.mistake-label { font-size:11px; letter-spacing:2px; text-transform:uppercase; color:#92400E; font-weight:700; margin-bottom:12px; }
+
+/* EXERCISE BOX */
+.ex-box { background:var(--light-grey); border:1px solid var(--border-grey); border-radius:10px; padding:18px; margin-bottom:14px; }
+.ex-label { font-size:11px; letter-spacing:2px; text-transform:uppercase; font-variant:small-caps; color:var(--gold); font-weight:700; margin-bottom:8px; }
+
+/* QUIZ: QUESTION CARDS */
+.q-card { background:var(--white); border:1px solid var(--border-grey); border-radius:12px; padding:22px; margin-bottom:14px; box-shadow:0 2px 8px rgba(0,0,0,0.04); }
+.q-top { display:flex; gap:12px; align-items:flex-start; margin-bottom:14px; }
+.q-num { background:var(--navy); color:var(--gold); border-radius:5px; padding:3px 10px; font-size:11px; font-weight:700; white-space:nowrap; flex-shrink:0; margin-top:2px; }
+.q-text { font-size:15px; font-weight:500; color:var(--navy); line-height:1.5; }
+.q-hint { font-size:12px; color:var(--sky); margin-top:4px; font-style:italic; }
+.q-options { display:flex; flex-direction:column; gap:8px; }
+.q-opt { padding:10px 15px; border:1.5px solid var(--border-grey); border-radius:7px; background:var(--off-white); font-size:14px; color:var(--navy); cursor:pointer; transition:all 0.12s; text-align:left; font-family:var(--font-body); display:flex; align-items:center; gap:10px; }
+.q-opt:hover:not(:disabled) { border-color:var(--sky); background:#EEF6FB; }
+.q-opt.selected { border-color:var(--sky); background:#EEF6FB; }
+.q-opt.correct { border-color:var(--green); background:var(--green-bg); color:var(--green); font-weight:500; }
+.q-opt.wrong   { border-color:var(--red);   background:var(--red-bg);   color:var(--red); }
+.q-opt:disabled { cursor:default; }
+.opt-letter { width:22px; height:22px; border-radius:50%; background:var(--border-grey); font-size:11px; font-weight:700; display:flex; align-items:center; justify-content:center; flex-shrink:0; transition:all 0.12s; }
+.q-opt.correct .opt-letter { background:var(--green); color:white; }
+.q-opt.wrong   .opt-letter { background:var(--red);   color:white; }
+.q-opt.selected .opt-letter { background:var(--sky);  color:white; }
+.q-feedback { margin-top:10px; padding:9px 13px; border-radius:7px; font-size:13px; line-height:1.5; }
+.q-feedback.correct { background:var(--green-bg); color:var(--green); }
+.q-feedback.wrong   { background:var(--red-bg);   color:var(--red); }
+
+/* QUIZ SCORE */
+.score-bar { background:var(--white); border:1px solid var(--border-grey); border-radius:10px; padding:14px 18px; margin-bottom:20px; display:flex; align-items:center; gap:14px; }
+.score-label { font-size:12px; color:var(--grey-blue); font-weight:700; white-space:nowrap; }
+.score-track { flex:1; height:7px; background:var(--light-grey); border-radius:4px; overflow:hidden; }
+.score-fill  { height:100%; background:linear-gradient(90deg,var(--sky),var(--green)); border-radius:4px; transition:width 0.5s ease; }
+.score-count { font-size:14px; font-weight:700; color:var(--navy); white-space:nowrap; min-width:48px; text-align:right; }
+.quiz-result { background:var(--navy); border-radius:12px; padding:30px; text-align:center; margin-top:22px; }
+.result-score { font-family:var(--font-heading); font-size:52px; color:var(--gold); margin-bottom:8px; }
+.result-label { font-size:18px; color:var(--white); margin-bottom:6px; }
+.result-msg   { font-size:14px; color:rgba(255,255,255,0.5); font-style:italic; }
+.quiz-intro { background:var(--navy); border-radius:12px; padding:22px; margin-bottom:22px; display:flex; align-items:center; gap:18px; }
+.quiz-intro-icon { font-size:34px; flex-shrink:0; }
+.quiz-intro h3 { font-family:var(--font-heading); font-size:21px; color:var(--white); margin-bottom:4px; }
+.quiz-intro p  { font-size:13px; color:rgba(255,255,255,0.5); font-style:italic; }
+
+/* BUTTONS */
+.check-btn { padding:10px 18px; background:var(--navy); color:var(--white); border:none; border-radius:6px; font-family:var(--font-body); font-size:12px; font-weight:700; letter-spacing:1px; text-transform:uppercase; cursor:pointer; transition:background 0.15s; white-space:nowrap; }
+.check-btn:hover { background:var(--sky); }
+.check-btn:disabled { opacity:0.4; cursor:default; }
+
+/* NAV FOOTER */
+.nav-footer { display:flex; justify-content:space-between; align-items:center; margin-top:40px; padding-top:22px; border-top:1px solid var(--border-grey); gap:12px; }
+.nav-btn { padding:11px 24px; border-radius:7px; font-family:var(--font-body); font-size:13px; font-weight:600; cursor:pointer; border:none; transition:all 0.18s; }
+.nav-prev { background:var(--white); color:var(--navy); border:1.5px solid var(--border-grey); }
+.nav-prev:hover:not(:disabled) { border-color:var(--gold); color:var(--navy); }
+.nav-prev:disabled { opacity:0.35; cursor:default; }
+.nav-next { background:var(--navy); color:var(--white); }
+.nav-next:hover:not(:disabled) { background:var(--gold); color:var(--navy); }
+.nav-next:disabled { background:var(--border-grey); cursor:default; }
+.nav-center { font-size:12px; color:var(--grey-blue); }
+
+/* UTILITIES */
+.divider { height:1px; background:var(--border-grey); margin:26px 0; }
+.sec-intro { font-size:15px; color:var(--slate); margin-bottom:18px; line-height:1.7; }
+.h-serif { font-family:var(--font-heading); font-size:20px; color:var(--navy); margin-bottom:10px; }
+
+/* SITE FOOTER */
+.site-footer { background: var(--navy); border-top: 1px solid rgba(201,151,44,0.3); margin-top: 60px; }
+.site-footer-inner { max-width: 900px; margin: 0 auto; padding: 20px 32px; display: flex; flex-direction: column; gap: 6px; }
+.site-footer-credit { font-family: var(--font-body); font-size: 12px; color: rgba(255,255,255,0.75); }
+.site-footer-credit strong { color: var(--gold); font-weight: 700; }
+.site-footer-credit a { color: var(--gold-light); text-decoration: none; }
+.site-footer-credit a:hover { text-decoration: underline; }
+.site-footer-legal { font-family: var(--font-body); font-size: 10px; color: rgba(255,255,255,0.35); line-height: 1.7; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 10px; margin-top: 4px; }
+</style>
+</head>
+<body>
+
+<!-- PERMANENT SITE HEADER -->
+<header class="site-header">
+  <div class="site-header-inner">
+    <div class="site-header-brand">Corporate English: From Foundations to Fluency</div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Grammar Focus · A1</div>
+    <h1 class="hero-title">Prepositions of Place: IN, ON, AT</h1>
+    <p class="hero-sub">A standalone grammar mini-lesson · everyday English, not business-focused · 30 min</p>
+
+    <div class="hero-outcomes">
+      <div><div class="outcome-item">Choose the correct preposition — in, on, or at</div><div class="outcome-note">Elegir la preposición correcta — in, on o at</div></div>
+      <div><div class="outcome-item">Recognize the pattern behind each preposition</div><div class="outcome-note">Reconocer el patrón detrás de cada preposición</div></div>
+      <div><div class="outcome-item">Avoid the most common Spanish-to-English mistakes</div><div class="outcome-note">Evitar los errores más comunes de español a inglés</div></div>
+    </div>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-fill" id="progressBar" style="width:0%"></div>
+  </div>
+</div>
+
+<!-- STEP NAV -->
+<div class="step-nav">
+  <div class="step-nav-inner" id="stepNav"></div>
+</div>
+
+<!-- MAIN CONTENT -->
+<div class="main" id="mainContent"></div>
+
+
+<!-- ═══════════════════════════════════════════════════════════════════
+     SINGLE SCRIPT BLOCK
+     ↓↓↓  LESSON CONTENT START
+     ═══════════════════════════════════════════════════════════════════ -->
+<script>
+
+// ── STATE (do not edit) ───────────────────────────────────
+let currentStep = 0;
+let STEPS = [];
+
+// ── EXTRA CSS FOR PATTERNS NOT IN BASE SHELL (tap-reveal) ──
+(function injectExtraStyles(){
+  const css = `
+    .tap-row { background:var(--white); border:1px solid var(--border-grey); border-radius:8px; padding:13px 16px; margin-bottom:10px; cursor:pointer; }
+    .tap-row-top { display:flex; justify-content:space-between; align-items:center; gap:10px; }
+    .tap-q { font-size:14px; color:var(--navy); }
+    .tap-hint-label { font-size:11px; color:var(--grey-blue); white-space:nowrap; }
+    .tap-answer { display:none; padding-top:6px; margin-top:6px; border-top:1px dashed var(--border-grey); font-size:14px; color:var(--green); font-weight:700; }
+    .tap-answer.show { display:block; }
+    .mistake-wrong { display:flex; align-items:center; gap:10px; padding:9px 13px; background:var(--red-bg); border-radius:7px; font-size:14px; color:var(--red); margin-bottom:7px; font-style:italic; }
+    .mistake-right { display:flex; align-items:center; gap:10px; padding:9px 13px; background:var(--green-bg); border-radius:7px; font-size:14px; color:var(--green); font-style:italic; }
+    .chart-wrap { display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px; margin-bottom:22px; }
+    @media(max-width:640px){ .chart-wrap{ grid-template-columns:1fr; } }
+    .chart-col { border-radius:10px; overflow:hidden; border:1px solid var(--border-grey); }
+    .chart-col-head { padding:12px 16px; font-family:var(--font-heading); font-size:17px; font-weight:700; color:var(--white); text-align:center; }
+    .chart-col.at .chart-col-head { background:#B45309; }
+    .chart-col.in .chart-col-head { background:var(--sky); }
+    .chart-col.on .chart-col-head { background:var(--green); }
+    .chart-col-sub { font-size:11px; color:rgba(255,255,255,0.8); text-align:center; padding:0 10px 10px; font-style:italic; }
+    .chart-col.at .chart-col-head, .chart-col.at .chart-col-sub { background:#B45309; }
+    .chart-item { padding:9px 16px; font-size:13px; color:var(--navy); background:var(--white); border-top:1px solid var(--light-grey); }
+    .chart-item:nth-child(even) { background:var(--off-white); }
+  `;
+  const el = document.createElement('style');
+  el.textContent = css;
+  document.head.appendChild(el);
+})();
+
+// ── NAVIGATION ENGINE (do not edit) ──────────────────────
+function getProgress(i) {
+  return STEPS.length === 1 ? 100 : Math.round(((i + 1) / STEPS.length) * 100);
+}
+function goTo(i) { currentStep = i; render(); window.scrollTo(0,0); }
+function navFooter() {
+  const isFirst = currentStep === 0;
+  const isLast  = currentStep === STEPS.length - 1;
+  const prevLabel = isFirst ? '← Previous' : '← ' + STEPS[currentStep-1].label.replace(/^\d+\.\s*/,'');
+  const nextLabel = isLast  ? 'Complete ✓'  : STEPS[currentStep+1].label.replace(/^\d+\.\s*/,'') + ' →';
+  return `<div class="nav-footer">
+    <button class="nav-btn nav-prev" ${isFirst?'disabled':`onclick="goTo(${currentStep-1})"`}>${prevLabel}</button>
+    <span class="nav-center">${currentStep+1} of ${STEPS.length}</span>
+    <button class="nav-btn nav-next" ${isLast?'disabled':`onclick="goTo(${currentStep+1})"`}>${nextLabel}</button>
+  </div>`;
+}
+function render() {
+  document.getElementById('stepNav').innerHTML = STEPS
+    .map((s,i) => `<button class="step-btn ${i===currentStep?'active':''}" onclick="goTo(${i})">${s.label}</button>`)
+    .join('');
+  document.getElementById('mainContent').innerHTML = STEPS[currentStep].fn();
+  document.getElementById('progressBar').style.width = getProgress(currentStep) + '%';
+}
+
+const normalise = s => s.trim().toLowerCase().replace(/\s+/g,' ').replace(/[.,]$/,'');
+
+// ── LESSON DATA — Diagnostic Quiz ──────────────────────────
+const QUIZ_DIAG = [
+  { q:'My keys are ___ the table.', opts:['in','on','at'], answer:1,
+    hint:'Think about a surface.', fb:'"On" is for surfaces — the keys are resting on top of the table. En español: "en la mesa," pero en inglés es "on."' },
+  { q:'She lives ___ London.', opts:['in','on','at'], answer:0,
+    hint:'Think about a city.', fb:'"In" is for cities and geographic areas — "in London."' },
+  { q:'Wait for me ___ the bus stop.', opts:['in','on','at'], answer:2,
+    hint:'Think about a specific point.', fb:'"At" is for a specific point — the bus stop is a point, not a space you go inside.' },
+  { q:'The cat is sleeping ___ the sofa.', opts:['in','on','at'], answer:1,
+    hint:'Think about a surface.', fb:'"On" is for surfaces — the cat is on top of the sofa.' },
+  { q:"There's a spider ___ the bathtub!", opts:['in','on','at'], answer:0,
+    hint:'Think about an enclosed space.', fb:'"In" is for enclosed spaces — the spider is inside the bathtub.' },
+  { q:'I saw her ___ the party last night.', opts:['in','on','at'], answer:2,
+    hint:'Think about an event.', fb:'"At" is for events and activities — "at a party."' },
+  { q:'We watched the game ___ TV.', opts:['in','on','at'], answer:1,
+    hint:'Think about media.', fb:'"On" is for broadcast media — "on TV," "on the radio."' },
+  { q:"He's ___ the swimming pool.", opts:['in','on','at'], answer:0,
+    hint:'Think about a body of water.', fb:'"In" is for bodies of water — "in the pool."' },
+  { q:'Turn left ___ the end of the street.', opts:['in','on','at'], answer:2,
+    hint:'Think about the end of something.', fb:'"At" is for the end/beginning/top/bottom of something — "at the end of the street."' },
+  { q:'My brother works ___ a hospital.', opts:['in','on','at'], answer:0,
+    hint:'Think about an enclosed space.', fb:'"In" is used here for a building thought of as an enclosed workspace — "in a hospital."' },
+];
+
+// ── LESSON DATA — Concept Checks ───────────────────────────
+const AT_CQ = [
+  { type:'mc', q:'"I\'ll meet you ___ the door."', opts:['in','on','at'], answer:2,
+    hint:'A specific point.', fb:'"At the door" — a specific point, not a space.' },
+  { type:'tf', q:'We use "at" for events like parties and weddings.', answer:true,
+    hint:'Think about the AT rules.', fb:'Correct — "at a party," "at a wedding," "at a concert."' },
+  { type:'input', q:'Complete: "She is ___ school today." (one word)', hint:'Think about places treated as an activity.',
+    answers:['at'], display:'at', fb:'"At school" — school is treated as a point/activity, not a building.' },
+];
+const IN_CQ = [
+  { type:'mc', q:'"He lives ___ Mexico City."', opts:['in','on','at'], answer:0,
+    hint:'A geographic area.', fb:'"In" is used for cities — "in Mexico City."' },
+  { type:'tf', q:'We use "in" for small vehicles like cars and taxis.', answer:true,
+    hint:'Think about vehicle size.', fb:'Correct — "in the car," "in a taxi" (but "on the bus," "on a plane").' },
+  { type:'input', q:'Complete: "I read about it ___ the newspaper." (one word)', hint:'Think about printed text.',
+    answers:['in'], display:'in', fb:'"In the newspaper" — printed and digital text use "in."' },
+];
+const ON_CQ = [
+  { type:'mc', q:'"She lives ___ the fifth floor."', opts:['in','on','at'], answer:1,
+    hint:'A floor of a building.', fb:'"On" is used for floors — "on the fifth floor."' },
+  { type:'tf', q:'We use "on" for large public transport like buses, trains, and planes.', answer:true,
+    hint:'Think about vehicles you can walk around in.', fb:'Correct — "on the bus," "on the train," "on a plane."' },
+  { type:'input', q:'Complete: "I heard it ___ the radio." (one word)', hint:'Think about broadcast media.',
+    answers:['on'], display:'on', fb:'"On the radio" — broadcast and screen media use "on."' },
+];
+
+// ── LESSON DATA — Practice (tap-to-reveal) ─────────────────
+const PRACTICE = [
+  { s: 'The children are playing ___ the park.', a: 'in' },
+  { s: 'Look ___ the picture ___ the wall.', a: 'at / on' },
+  { s: 'I left my umbrella ___ the taxi.', a: 'in' },
+  { s: 'We arrived ___ the airport two hours early.', a: 'at' },
+  { s: "There's a good movie ___ TV tonight.", a: 'on' },
+  { s: 'He works ___ the third floor.', a: 'on' },
+  { s: 'She was born ___ Brazil.', a: 'in' },
+  { s: "I'll see you ___ the party.", a: 'at' },
+  { s: 'The dog is sleeping ___ my bed.', a: 'on' },
+  { s: 'Meet me ___ the corner ___ 5 o\'clock.', a: 'at / at (note: the second "at" is for time, a different lesson!)' },
+];
+
+// ── LESSON DATA — Final Quiz ────────────────────────────────
+const QUIZ_FINAL = [
+  { q: 'The dog is sleeping ___ my bed.', opts:['in','on','at'], answer:1, hint:'Surface.', fb:'"On" — a surface.' },
+  { q: 'I left my umbrella ___ the taxi.', opts:['in','on','at'], answer:0, hint:'Small vehicle.', fb:'"In" — small vehicles like taxis and cars.' },
+  { q: 'We arrived ___ the airport two hours early.', opts:['in','on','at'], answer:2, hint:'A point/activity place.', fb:'"At the airport" — treated as a point.' },
+  { q: "There's a good movie ___ TV tonight.", opts:['in','on','at'], answer:1, hint:'Broadcast media.', fb:'"On TV" — broadcast media.' },
+  { q: 'He works ___ the third floor.', opts:['in','on','at'], answer:1, hint:'A floor.', fb:'"On" — floors of a building.' },
+  { q: 'She was born ___ Brazil.', opts:['in','on','at'], answer:0, hint:'A country.', fb:'"In" — geographic areas.' },
+  { q: "I'll see you ___ the party.", opts:['in','on','at'], answer:2, hint:'An event.', fb:'"At" — events and activities.' },
+  { q: 'The children are playing ___ the park.', opts:['in','on','at'], answer:0, hint:'An enclosed area.', fb:'"In" — the park is a bounded space.' },
+  { q: 'Meet me ___ the corner.', opts:['in','on','at'], answer:2, hint:'A specific point.', fb:'"At" — a specific point.' },
+  { q: 'My glasses are ___ the desk.', opts:['in','on','at'], answer:1, hint:'A surface.', fb:'"On" — a surface.' },
+];
+
+// ── Independent quiz state — one object per part ───────────
+const qState = { diag: {}, final: {} };
+const qScore = { diag: 0, final: 0 };
+const qAttempts = { diag: 0, final: 0 };
+const quizBank = { diag: QUIZ_DIAG, final: QUIZ_FINAL };
+
+// ── Concept-check mini-quiz state ───────────────────────────
+const miniState = { at: {}, in: {}, on: {} };
+const miniQMap = { at: AT_CQ, in: IN_CQ, on: ON_CQ };
+
+// ── SECTION RENDERERS ─────────────────────────────────────
+
+function renderDiagnostic() {
+  const answered = Object.values(qState.diag).filter(s => s.revealed).length;
+  const total = QUIZ_DIAG.length;
+  const pct = total ? (answered / total) * 100 : 0;
+  const allDone = answered === total && total > 0;
+  const allCorrect = allDone && qScore.diag === total;
+  const wrongCount = allDone ? total - qScore.diag : 0;
+
+  return `<div class="sc">
+    <div class="sec-badge">
+      <div class="sec-badge-num">1</div>
+      <div class="sec-badge-title">Try It First</div>
+      <div class="sec-badge-time">8 min</div>
+    </div>
+    <hr class="gold-rule">
+    <div class="es-note">Antes de la explicación, intenta responder estas preguntas con lo que ya sabes. No te preocupes si te equivocas — es solo para ver dónde estás. ¡Después vamos a explicar todo!</div>
+    <div class="score-bar">
+      <span class="score-label">Progress</span>
+      <div class="score-track"><div class="score-fill" style="width:${pct}%"></div></div>
+      <span class="score-count">${answered} / ${total}</span>
+    </div>
+    ${QUIZ_DIAG.map((q,i) => renderQ('diag', {type:'mc', q:q.q, opts:q.opts, answer:q.answer, hint:q.hint, fb:q.fb}, i)).join('')}
+    ${allDone ? `<div class="quiz-result">
+      <div class="result-score">${qScore.diag} / ${total}</div>
+      <div class="result-label">${partLabel(qScore.diag, total)}</div>
+      <div class="result-msg">Now let's go through the rules step by step.</div>
+      ${!allCorrect?`<div style="margin-top:24px;"><button onclick="retakePart('diag')" style="padding:12px 28px;background:var(--gold);color:var(--navy);border:none;border-radius:8px;font-family:var(--font-body);font-size:13px;font-weight:700;cursor:pointer;">↺ Retry ${wrongCount} Wrong Answer${wrongCount===1?'':'s'}</button></div>`:''}
+    </div>` : ''}
+    ${navFooter()}
+  </div>`;
+}
+
+function renderAt() {
+  return `<div class="sc">
+    <div class="sec-badge">
+      <div class="sec-badge-num">2</div>
+      <div class="sec-badge-title">AT</div>
+      <div class="sec-badge-time">5 min</div>
+    </div>
+    <hr class="gold-rule">
+    <div class="es-note">"At" se usa para un punto específico — no un espacio dentro del cual estás. Piensa en "at" como señalar un punto exacto en un mapa.</div>
+
+    <div class="examples-wrap">
+      <div class="examples-label">Notice</div>
+      <div class="example-item"><span class="example-en">Wait for me at the bus stop.</span><span class="example-arrow">→</span><span class="example-es">Espérame en la parada de autobús.</span></div>
+      <div class="example-item"><span class="example-en">I'll meet you at the door.</span><span class="example-arrow">→</span><span class="example-es">Te veré en la puerta.</span></div>
+      <div class="example-item"><span class="example-en">She was at a wedding last weekend.</span><span class="example-arrow">→</span><span class="example-es">Ella estuvo en una boda el fin de semana pasado.</span></div>
+      <div class="example-item"><span class="example-en">Turn at the end of the street.</span><span class="example-arrow">→</span><span class="example-es">Gira al final de la calle.</span></div>
+      <div class="example-item"><span class="example-en">He's at school today.</span><span class="example-arrow">→</span><span class="example-es">Él está en la escuela hoy.</span></div>
+    </div>
+
+    <div class="h-serif">Rules</div>
+    <div class="pattern-box">
+      <div class="pattern-box-head">English pattern → Spanish</div>
+      <div class="pattern-row"><div class="pattern-en"><strong>A specific point</strong> (not a space you're inside)<br><em>at the bus stop, at the traffic light, at the corner</em></div><div class="pattern-es">un punto específico, no un espacio</div></div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Top / bottom / end / beginning</strong> of something<br><em>at the top of the hill, at the end of the road</em></div><div class="pattern-es">arriba, abajo, al final, al principio de algo</div></div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Events and activities</strong><br><em>at a party, at a concert, at a wedding, at a meeting</em></div><div class="pattern-es">eventos y actividades</div></div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Places as a point/activity</strong>, not a building<br><em>at school, at work, at home, at the airport, at the station</em></div><div class="pattern-es">lugares vistos como un punto o actividad, no como un edificio</div></div>
+    </div>
+
+    <div class="es-note">Cuidado: en español decimos "en casa," "en la escuela" — por eso muchos estudiantes usan "in" por error. Recuerda: <strong>at home, at school</strong> usan AT, no IN.</div>
+
+    <div class="mistake-wrap">
+      <div class="mistake-label">⚠️ Common Mistakes — tap to reveal the fix</div>
+      <div class="tap-row" onclick="this.querySelector('.tap-answer').classList.toggle('show')">
+        <div class="tap-row-top"><div class="tap-q">❌ I'm in home.</div><div class="tap-hint-label">Tap to reveal</div></div>
+        <div class="tap-answer">✅ I'm <strong>at</strong> home.</div>
+      </div>
+      <div class="tap-row" onclick="this.querySelector('.tap-answer').classList.toggle('show')">
+        <div class="tap-row-top"><div class="tap-q">❌ She's on school.</div><div class="tap-hint-label">Tap to reveal</div></div>
+        <div class="tap-answer">✅ She's <strong>at</strong> school.</div>
+      </div>
+      <div class="tap-row" onclick="this.querySelector('.tap-answer').classList.toggle('show')">
+        <div class="tap-row-top"><div class="tap-q">❌ Meet me in the corner.</div><div class="tap-hint-label">Tap to reveal</div></div>
+        <div class="tap-answer">✅ Meet me <strong>at</strong> the corner.</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="sub-heading" style="margin-bottom:4px;">✅ Quick Check — AT</div>
+    <p style="font-size:13px;color:var(--grey-blue);margin-bottom:16px;font-style:italic;">2–3 quick questions to confirm AT is clear before you move on.</p>
+    ${renderMiniQ('at', AT_CQ)}
+
+    ${navFooter()}
+  </div>`;
+}
+
+function renderIn() {
+  return `<div class="sc">
+    <div class="sec-badge">
+      <div class="sec-badge-num">3</div>
+      <div class="sec-badge-title">IN</div>
+      <div class="sec-badge-time">5 min</div>
+    </div>
+    <hr class="gold-rule">
+    <div class="es-note">"In" se usa para espacios cerrados o áreas — piensa en "in" como estar dentro de algo, ya sea una caja, una ciudad o el mar.</div>
+
+    <div class="examples-wrap">
+      <div class="examples-label">Notice</div>
+      <div class="example-item"><span class="example-en">The keys are in my bag.</span><span class="example-arrow">→</span><span class="example-es">Las llaves están en mi bolso.</span></div>
+      <div class="example-item"><span class="example-en">He lives in Mexico City.</span><span class="example-arrow">→</span><span class="example-es">Él vive en la Ciudad de México.</span></div>
+      <div class="example-item"><span class="example-en">There's a fish in the pool.</span><span class="example-arrow">→</span><span class="example-es">Hay un pez en la piscina.</span></div>
+      <div class="example-item"><span class="example-en">I read about it in the newspaper.</span><span class="example-arrow">→</span><span class="example-es">Lo leí en el periódico.</span></div>
+      <div class="example-item"><span class="example-en">We were in the car for six hours.</span><span class="example-arrow">→</span><span class="example-es">Estuvimos en el carro por seis horas.</span></div>
+    </div>
+
+    <div class="h-serif">Rules</div>
+    <div class="pattern-box">
+      <div class="pattern-box-head">English pattern → Spanish</div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Enclosed spaces</strong> — inside something<br><em>in the box, in the room, in the fridge</em></div><div class="pattern-es">espacios cerrados, dentro de algo</div></div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Geographic areas</strong> (cities, countries, regions)<br><em>in Bogotá, in Colombia, in the mountains</em></div><div class="pattern-es">áreas geográficas</div></div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Bodies of water</strong><br><em>in the sea, in the pool, in the river</em></div><div class="pattern-es">cuerpos de agua</div></div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Printed or digital text</strong><br><em>in the book, in the newspaper, in an email</em></div><div class="pattern-es">texto impreso o digital</div></div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Small vehicles</strong> you sit inside<br><em>in the car, in a taxi</em></div><div class="pattern-es">vehículos pequeños en los que te sientas dentro</div></div>
+    </div>
+
+    <div class="es-note">Cuidado: en español "leer en el periódico" puede sonar parecido a "on," pero en inglés siempre es <strong>in the newspaper.</strong></div>
+
+    <div class="mistake-wrap">
+      <div class="mistake-label">⚠️ Common Mistakes — tap to reveal the fix</div>
+      <div class="tap-row" onclick="this.querySelector('.tap-answer').classList.toggle('show')">
+        <div class="tap-row-top"><div class="tap-q">❌ I read it on the newspaper.</div><div class="tap-hint-label">Tap to reveal</div></div>
+        <div class="tap-answer">✅ I read it <strong>in</strong> the newspaper.</div>
+      </div>
+      <div class="tap-row" onclick="this.querySelector('.tap-answer').classList.toggle('show')">
+        <div class="tap-row-top"><div class="tap-q">❌ We were on the taxi.</div><div class="tap-hint-label">Tap to reveal</div></div>
+        <div class="tap-answer">✅ We were <strong>in</strong> the taxi.</div>
+      </div>
+      <div class="tap-row" onclick="this.querySelector('.tap-answer').classList.toggle('show')">
+        <div class="tap-row-top"><div class="tap-q">❌ She lives at Bogotá.</div><div class="tap-hint-label">Tap to reveal</div></div>
+        <div class="tap-answer">✅ She lives <strong>in</strong> Bogotá.</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="sub-heading" style="margin-bottom:4px;">✅ Quick Check — IN</div>
+    <p style="font-size:13px;color:var(--grey-blue);margin-bottom:16px;font-style:italic;">2–3 quick questions to confirm IN is clear before you move on.</p>
+    ${renderMiniQ('in', IN_CQ)}
+
+    ${navFooter()}
+  </div>`;
+}
+
+function renderOn() {
+  return `<div class="sc">
+    <div class="sec-badge">
+      <div class="sec-badge-num">4</div>
+      <div class="sec-badge-title">ON</div>
+      <div class="sec-badge-time">5 min</div>
+    </div>
+    <hr class="gold-rule">
+    <div class="es-note">"On" se usa para superficies — piensa en "on" como estar encima de algo, un piso, un autobús o incluso la televisión.</div>
+
+    <div class="examples-wrap">
+      <div class="examples-label">Notice</div>
+      <div class="example-item"><span class="example-en">The book is on the shelf.</span><span class="example-arrow">→</span><span class="example-es">El libro está en el estante.</span></div>
+      <div class="example-item"><span class="example-en">She lives on the fifth floor.</span><span class="example-arrow">→</span><span class="example-es">Ella vive en el quinto piso.</span></div>
+      <div class="example-item"><span class="example-en">I heard it on the radio.</span><span class="example-arrow">→</span><span class="example-es">Lo escuché en la radio.</span></div>
+      <div class="example-item"><span class="example-en">We traveled on a train.</span><span class="example-arrow">→</span><span class="example-es">Viajamos en tren.</span></div>
+      <div class="example-item"><span class="example-en">Turn left on Main Street.</span><span class="example-arrow">→</span><span class="example-es">Gira a la izquierda en la calle Main.</span></div>
+    </div>
+
+    <div class="h-serif">Rules</div>
+    <div class="pattern-box">
+      <div class="pattern-box-head">English pattern → Spanish</div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Surfaces</strong><br><em>on the table, on the wall, on the floor, on the ceiling</em></div><div class="pattern-es">superficies</div></div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Floors of a building</strong><br><em>on the first floor, on the top floor</em></div><div class="pattern-es">pisos de un edificio</div></div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Large vehicles</strong> you can walk around in<br><em>on the bus, on the train, on a plane, on a ship</em></div><div class="pattern-es">vehículos grandes en los que puedes caminar (contraste: carros/taxis usan "in")</div></div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Streets</strong><br><em>on Main Street</em></div><div class="pattern-es">calles</div></div>
+      <div class="pattern-row"><div class="pattern-en"><strong>Broadcast / screen media</strong><br><em>on TV, on the radio, on the news, on the internet</em></div><div class="pattern-es">medios de difusión / pantalla</div></div>
+    </div>
+
+    <div class="es-note">Cuidado: los vehículos <strong>grandes</strong> (bus, tren, avión) usan "on," pero los vehículos <strong>pequeños</strong> (carro, taxi) usan "in." ¡Es la diferencia entre poder caminar dentro o no!</div>
+
+    <div class="mistake-wrap">
+      <div class="mistake-label">⚠️ Common Mistakes — tap to reveal the fix</div>
+      <div class="tap-row" onclick="this.querySelector('.tap-answer').classList.toggle('show')">
+        <div class="tap-row-top"><div class="tap-q">❌ I was in the bus.</div><div class="tap-hint-label">Tap to reveal</div></div>
+        <div class="tap-answer">✅ I was <strong>on</strong> the bus.</div>
+      </div>
+      <div class="tap-row" onclick="this.querySelector('.tap-answer').classList.toggle('show')">
+        <div class="tap-row-top"><div class="tap-q">❌ She lives in the third floor.</div><div class="tap-hint-label">Tap to reveal</div></div>
+        <div class="tap-answer">✅ She lives <strong>on</strong> the third floor.</div>
+      </div>
+      <div class="tap-row" onclick="this.querySelector('.tap-answer').classList.toggle('show')">
+        <div class="tap-row-top"><div class="tap-q">❌ I saw it in TV.</div><div class="tap-hint-label">Tap to reveal</div></div>
+        <div class="tap-answer">✅ I saw it <strong>on</strong> TV.</div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+    <div class="sub-heading" style="margin-bottom:4px;">✅ Quick Check — ON</div>
+    <p style="font-size:13px;color:var(--grey-blue);margin-bottom:16px;font-style:italic;">2–3 quick questions to confirm ON is clear before you move on.</p>
+    ${renderMiniQ('on', ON_CQ)}
+
+    ${navFooter()}
+  </div>`;
+}
+
+function renderSummary() {
+  return `<div class="sc">
+    <div class="sec-badge">
+      <div class="sec-badge-num">5</div>
+      <div class="sec-badge-title">Summary Chart</div>
+      <div class="sec-badge-time">2 min</div>
+    </div>
+    <hr class="gold-rule">
+    <p class="sec-intro">Un resumen visual de las tres preposiciones, lado a lado.</p>
+
+    <div class="chart-wrap">
+      <div class="chart-col at">
+        <div class="chart-col-head">AT</div>
+        <div class="chart-col-sub">a point — un punto</div>
+        <div class="chart-item">at the bus stop</div>
+        <div class="chart-item">at the door</div>
+        <div class="chart-item">at a party</div>
+        <div class="chart-item">at school / work / home</div>
+        <div class="chart-item">at the end of the street</div>
+      </div>
+      <div class="chart-col in">
+        <div class="chart-col-head">IN</div>
+        <div class="chart-col-sub">inside a space — dentro de un espacio</div>
+        <div class="chart-item">in the box</div>
+        <div class="chart-item">in London</div>
+        <div class="chart-item">in the pool</div>
+        <div class="chart-item">in the car / a taxi</div>
+        <div class="chart-item">in the newspaper</div>
+      </div>
+      <div class="chart-col on">
+        <div class="chart-col-head">ON</div>
+        <div class="chart-col-sub">a surface — una superficie</div>
+        <div class="chart-item">on the table</div>
+        <div class="chart-item">on the wall</div>
+        <div class="chart-item">on the bus</div>
+        <div class="chart-item">on the first floor</div>
+        <div class="chart-item">on TV</div>
+      </div>
+    </div>
+
+    <div class="tip-box">
+      <div class="tip-label">💡 Tip</div>
+      Cuando dudes, pregúntate: ¿es un punto específico (AT), un espacio cerrado o área (IN), o una superficie (ON)? La mayoría de los casos encajan en una de estas tres ideas.
+    </div>
+
+    ${navFooter()}
+  </div>`;
+}
+
+function renderPractice() {
+  return `<div class="sc">
+    <div class="sec-badge">
+      <div class="sec-badge-num">6</div>
+      <div class="sec-badge-title">Practice</div>
+      <div class="sec-badge-time">5 min</div>
+    </div>
+    <hr class="gold-rule">
+    <div class="es-note">Completa cada oración con la preposición correcta. Toca cada una para revisar tu respuesta.</div>
+    <div class="ex-box">
+      <div class="ex-label">Exercise — Fill in the blank</div>
+      ${PRACTICE.map((it,i) => `
+        <div class="tap-row" onclick="this.querySelector('.tap-answer').classList.toggle('show')">
+          <div class="tap-row-top">
+            <div class="tap-q">${i+1}. ${it.s}</div>
+            <div class="tap-hint-label">Tap to reveal</div>
+          </div>
+          <div class="tap-answer">✅ ${it.a}</div>
+        </div>`).join('')}
+    </div>
+    ${navFooter()}
+  </div>`;
+}
+
+function renderFinal() {
+  const answered = Object.values(qState.final).filter(s => s.revealed).length;
+  const total = QUIZ_FINAL.length;
+  const pct = total ? (answered / total) * 100 : 0;
+  const allDone = answered === total && total > 0;
+  const allCorrect = allDone && qScore.final === total;
+  const wrongCount = allDone ? total - qScore.final : 0;
+
+  return `<div class="sc">
+    <div class="sec-badge">
+      <div class="sec-badge-num">7</div>
+      <div class="sec-badge-title">Final Quiz</div>
+      <div class="sec-badge-time">5 min</div>
+    </div>
+    <hr class="gold-rule">
+    <div class="quiz-intro">
+      <div class="quiz-intro-icon">🎯</div>
+      <div>
+        <h3>¡Pon a prueba lo que aprendiste!</h3>
+        <p>${total} questions · Take your time</p>
+      </div>
+    </div>
+    <div class="score-bar">
+      <span class="score-label">Progress</span>
+      <div class="score-track"><div class="score-fill" style="width:${pct}%"></div></div>
+      <span class="score-count">${answered} / ${total}</span>
+    </div>
+    ${QUIZ_FINAL.map((q,i) => renderQ('final', {type:'mc', q:q.q, opts:q.opts, answer:q.answer, hint:q.hint, fb:q.fb}, i)).join('')}
+    ${allDone ? `<div class="quiz-result">
+      <div class="result-score">${qScore.final} / ${total}</div>
+      <div class="result-label">${partLabel(qScore.final, total)}</div>
+      <div class="result-msg">${qScore.final===total ? 'Outstanding — a perfect score!' : 'Retry the wrong answers, or go back and review the rules.'}</div>
+      <div style="font-size:12px;color:rgba(255,255,255,0.4);margin-top:10px;">Attempts so far: ${qAttempts.final}</div>
+      <div style="display:flex;gap:12px;justify-content:center;margin-top:24px;flex-wrap:wrap">
+        ${!allCorrect?`<button onclick="retakePart('final')" style="padding:12px 28px;background:var(--gold);color:var(--navy);border:none;border-radius:8px;font-family:var(--font-body);font-size:13px;font-weight:700;cursor:pointer;">↺ Retry ${wrongCount} Wrong Answer${wrongCount===1?'':'s'}</button>`:''}
+        <button onclick="goTo(0)" style="padding:12px 28px;background:rgba(255,255,255,0.1);color:var(--white);border:1px solid rgba(255,255,255,0.25);border-radius:8px;font-family:var(--font-body);font-size:13px;font-weight:600;cursor:pointer;">← Review Lesson</button>
+      </div>
+    </div>` : ''}
+    ${navFooter()}
+  </div>`;
+}
+
+function partLabel(score, total) {
+  if (score === total) return '🎉 ¡Perfecto!';
+  if (score >= total * 0.7) return '¡Buen trabajo!';
+  return 'Keep practising — ¡tú puedes!';
+}
+
+// ── QUIZ ENGINE — parameterized by part (diag / final) ─────
+function renderQ(part, q, i) {
+  const s = qState[part][i] || {};
+  const rev = s.revealed;
+  const letters = ['A','B','C','D'];
+  const body = `<div class="q-options">
+      ${q.opts.map((opt,j) => {
+        let cls = 'q-opt';
+        const isAns = j===q.answer;
+        if (rev) { if(isAns) cls+=' correct'; else if(s.selected===j) cls+=' wrong'; }
+        else if (s.selected===j) cls+=' selected';
+        return `<button class="${cls}" onclick="selectOpt('${part}',${i},${j})" ${rev?'disabled':''}><span class="opt-letter">${letters[j]}</span>${opt}</button>`;
+      }).join('')}
+    </div>
+    ${!rev ? `<div style="margin-top:12px;text-align:right"><button class="check-btn" onclick="revealQ('${part}',${i})" ${s.selected===undefined?'disabled':''}>Check</button></div>` : ''}
+    ${rev  ? `<div class="q-feedback ${s.selected===q.answer?'correct':'wrong'}">💡 ${q.fb}</div>` : ''}`;
+
+  return `<div class="q-card" id="qc-${part}-${i}">
+    <div class="q-top">
+      <span class="q-num">Q${i+1}</span>
+      <div>
+        <div class="q-text">${q.q}</div>
+        ${q.hint ? `<div class="q-hint">${q.hint}</div>` : ''}
+      </div>
+    </div>
+    ${body}
+  </div>`;
+}
+
+function selectOpt(part,qi,j) { if(!qState[part][qi])qState[part][qi]={}; if(qState[part][qi].revealed)return; qState[part][qi].selected=j; rerenderPart(part); }
+function revealQ(part,qi)      { if(!qState[part][qi])qState[part][qi]={}; qState[part][qi].revealed=true; recalcPart(part); rerenderPart(part); }
+function retakePart(part) {
+  qAttempts[part]++;
+  quizBank[part].forEach((q,i) => {
+    const s=qState[part][i]; if(!s||!s.revealed)return;
+    const ok = s.selected===q.answer;
+    if(!ok){ delete qState[part][i]; }
+  });
+  recalcPart(part); rerenderPart(part);
+  setTimeout(()=>{
+    const first=quizBank[part].findIndex((_,i)=>!qState[part][i]||!qState[part][i].revealed);
+    const el=document.getElementById('qc-'+part+'-'+first);
+    if(el) el.scrollIntoView({behavior:'smooth',block:'center'});
+  },100);
+}
+function recalcPart(part) {
+  let s=0;
+  quizBank[part].forEach((q,i)=>{
+    const st=qState[part][i]; if(!st||!st.revealed)return;
+    if(st.selected===q.answer)s++;
+  });
+  qScore[part]=s;
+}
+function rerenderPart(part) {
+  const stepFn = part==='diag' ? renderDiagnostic : renderFinal;
+  const si = STEPS.findIndex(s => s.fn === stepFn);
+  if (currentStep === si) document.getElementById('mainContent').innerHTML = stepFn();
+}
+
+// ── CONCEPT-CHECK MINI-QUIZ ENGINE ─────────────────────────
+function renderMiniQ(prefix, questions) {
+  const state = miniState[prefix];
+  let html = '';
+  questions.forEach((q, i) => {
+    const s = state[i] || {};
+    const rev = s.revealed;
+    const letters = ['A','B','C','D'];
+    let body = '';
+
+    if (q.type === 'mc' || q.type === 'tf') {
+      const opts = q.type === 'mc' ? q.opts : ['True', 'False'];
+      const lets = q.type === 'mc' ? letters : ['T', 'F'];
+      body = `<div class="q-options">
+        ${opts.map((opt, j) => {
+          let cls = 'q-opt';
+          const isAns = q.type === 'mc' ? j === q.answer : q.answer === (j === 0);
+          if (rev) { if (isAns) cls += ' correct'; else if (s.selected === j) cls += ' wrong'; }
+          else if (s.selected === j) cls += ' selected';
+          return `<button class="${cls}" onclick="miniSelectOpt('${prefix}',${i},${j})" ${rev ? 'disabled' : ''}><span class="opt-letter">${lets[j]}</span>${opt}</button>`;
+        }).join('')}
+      </div>
+      ${!rev ? `<div style="margin-top:12px;text-align:right"><button class="check-btn" onclick="miniRevealQ('${prefix}',${i})" ${s.selected === undefined ? 'disabled' : ''}>Check</button></div>` : ''}
+      ${rev ? `<div class="q-feedback ${(q.type==='mc'?s.selected===q.answer:q.answer===(s.selected===0)) ? 'correct' : 'wrong'}">💡 ${q.fb}</div>` : ''}`;
+    }
+
+    if (q.type === 'input') {
+      const cls = rev ? (s.correct ? 'q-input correct' : 'q-input wrong') : 'q-input';
+      body = `<div class="q-input-row">
+        <input class="${cls}" id="mini-inp-${prefix}-${i}" type="text"
+          placeholder="Type your answer…" value="${s.inputVal || ''}"
+          oninput="miniSetInp('${prefix}',${i},this.value)" ${rev ? 'disabled' : ''}/>
+        ${!rev ? `<button class="check-btn" onclick="miniRevealInp('${prefix}',${i})">Check</button>` : ''}
+      </div>
+      ${rev ? `<div class="q-feedback ${s.correct ? 'correct' : 'wrong'}">✅ <strong>${q.display}</strong><br>💡 ${q.fb}</div>` : ''}`;
+    }
+
+    html += `<div class="q-card" id="mini-qc-${prefix}-${i}">
+      <div class="q-top">
+        <span class="q-num">Q${i+1}</span>
+        <div>
+          <div class="q-text">${q.q}</div>
+          ${q.hint ? `<div class="q-hint">${q.hint}</div>` : ''}
+        </div>
+      </div>
+      ${body}
+    </div>`;
+  });
+  return html;
+}
+
+function miniSelectOpt(prefix, qi, j) {
+  if (!miniState[prefix][qi]) miniState[prefix][qi] = {};
+  if (miniState[prefix][qi].revealed) return;
+  miniState[prefix][qi].selected = j;
+  miniRerender(prefix);
+}
+function miniRevealQ(prefix, qi) {
+  if (!miniState[prefix][qi]) miniState[prefix][qi] = {};
+  miniState[prefix][qi].revealed = true;
+  miniRerender(prefix);
+}
+function miniSetInp(prefix, qi, v) {
+  if (!miniState[prefix][qi]) miniState[prefix][qi] = {};
+  miniState[prefix][qi].inputVal = v;
+}
+function miniRevealInp(prefix, qi) {
+  const q = miniQMap[prefix][qi];
+  if (!miniState[prefix][qi]) miniState[prefix][qi] = {};
+  const raw = miniState[prefix][qi].inputVal || '';
+  miniState[prefix][qi].correct = q.answers.some(a => normalise(raw) === normalise(a));
+  miniState[prefix][qi].revealed = true;
+  miniRerender(prefix);
+}
+function miniRerender(prefix) {
+  const fnMap = { at: renderAt, in: renderIn, on: renderOn };
+  const targetFn = fnMap[prefix];
+  const si = STEPS.findIndex(s => s.fn === targetFn);
+  if (currentStep === si) document.getElementById('mainContent').innerHTML = targetFn();
+}
+
+// ── STEPS — defined last, after all renderers above ───────
+STEPS = [
+  { label: "1. Try It First", fn: renderDiagnostic },
+  { label: "2. AT",           fn: renderAt },
+  { label: "3. IN",           fn: renderIn },
+  { label: "4. ON",           fn: renderOn },
+  { label: "5. Summary",      fn: renderSummary },
+  { label: "6. Practice",     fn: renderPractice },
+  { label: "7. Final Quiz",   fn: renderFinal },
+];
+
+// ↑↑↑  LESSON CONTENT END  ↑↑↑
+
+render(); // always last
+</script>
+
+
+<!-- PERMANENT SITE FOOTER -->
+<footer class="site-footer">
+  <div class="site-footer-inner">
+    <div class="site-footer-credit">
+      Curriculum Developed by &nbsp;<strong>Girish Vijayan</strong>
+      &nbsp;&nbsp;|&nbsp;&nbsp;
+      <a href="mailto:girish@zenningmyway.com">girish@zenningmyway.com</a>
+    </div>
+    <div class="site-footer-legal">
+      © 2026 Girish Vijayan. All Rights Reserved.
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      All materials in this curriculum are protected by copyright.
+      &nbsp;&nbsp;·&nbsp;&nbsp;
+      Unauthorized reproduction, distribution, or adaptation is prohibited.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
